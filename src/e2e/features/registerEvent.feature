@@ -8,10 +8,16 @@ Feature: Register for an Event
     When I click the "View Event" button for the selected event
     Then I should be taken to the event details page
     And I should see the event details on the page
+    And I should see the Agenda on the event details page
+    And I should see the Venue on the event details page
     And I should see an RSVP button on the event details page
     And the RSVP button should be clickable
     When I click the RSVP button
-    Then if a sign-in page appears, I should sign in
-    And if no sign-in page appears, I should see a form to fill out
-    And I fill out the form with valid details
+    Then I Sign In
+    Then I see the RSVP Form
+    Then I see user information pre filled
+    When I check the Terms and Conditions
+    Then I click the Submit button
+    Then I see the registration confirmation
+    Then I close the confirmation
 
