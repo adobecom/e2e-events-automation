@@ -16,24 +16,24 @@ this.page = await context.newPage();
 
 
 Then('I should see the event details on the page', async function () {
-    await expect(eventDetailsPage.isEventDetailsVisible() ).resolves.toBe(true);
+    await expect(this.eventDetailsPage.isEventDetailsVisible()).toBeTruthy();
     
   });
   
   Then('I should see the Agenda on the event details page', async function () {
-    await expect(eventDetailsPage.isAgendaVisible()).resolves.toBe(true);
+    await expect(this.eventDetailsPage.agenda).has
   });
   
   Then('I should see the Venue on the event details page', async function () {
-    await expect(eventDetailsPage.isVenueVisible()).resolves.toBe(true);
+    await expect(this.eventDetailsPage.venue).toBeVisible();
   });
   
   Then('I should see an RSVP button on the event details page', async function () {
-    await expect(eventDetailsPage.isRSVPButtonVisible()).resolves.toBe(true);
+    await expect(this.eventDetailsPage.rsvpButton).toBeVisible();
   });
   
   Then('the RSVP button should be clickable', async function () {
-    await expect(eventDetailsPage.isRSVPButtonClickable()).resolves.toBe(true);
+    await expect(eventDetailsPage.rsvpButton).toBeEnabled()
   });
   
   When('I click the RSVP button', async function () {

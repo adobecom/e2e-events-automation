@@ -3,20 +3,15 @@ class EventDetails{
 
 constructor(page){
 this.page=page;
+this.eventName=page.locator('.event-name');
+this.eventTime=page.locator('.event-name');
+this.agenda=page.locator('.event-name');
+this.venue=page.locator('.event-name');
+this.rsvpButton=page.locator('.event-name');
+this.signInPage=page.locator('.event-name');
+this.rsvpForm=page.locator('.event-name');
 }
 
-//Selectors
-  get eventName() { return this.page.locator('.event-name'); } // Adjust selector
-  get eventTime() { return this.page.locator('.event-time'); } 
-  get agenda() { return this.page.locator('.agenda'); } // Adjust selector
-  get venue() { return this.page.locator('.venue'); } // Adjust selector
-  get rsvpButton() { return this.page.locator('.rsvp-button'); } // Adjust selector
-  get signInPage() { return this.page.locator('.sign-in-page'); } // Adjust selector
-  get rsvpForm() { return this.page.locator('.rsvp-form'); } // Adjust selector
-
-
-
-//Actions
 
 
   async clickRSVPButton() {
@@ -45,27 +40,13 @@ this.page=page;
   // Verifications
   async isEventDetailsVisible() {
     try {
-        return (this.eventName.isVisible() && this.eventTime.isVisible);
+        return await (this.eventName.isVisible() && this.eventTime.isVisible);
     } catch (error) {
         
     }
   }
 
-  async isAgendaVisible() {
-    return this.agenda.isVisible();
-  }
 
-  async isVenueVisible() {
-    return this.venue.isVisible();
-  }
-
-  async isRSVPButtonVisible() {
-    return this.rsvpButton.isVisible();
-  }
-
-  async isRSVPButtonClickable() {
-    return this.rsvpButton.isEnabled();
-  }
 }
 
 module.exports = EventPage;
