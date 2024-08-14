@@ -1,5 +1,6 @@
 Feature: Register for an Event
 
+  @id-registration
   Scenario: User registers for an event with minimum required fields
 
     Given I am on the events hub page
@@ -21,3 +22,4 @@ Feature: Register for an Event
     Then I see the registration confirmation
     Then I close the confirmation
 
+         
