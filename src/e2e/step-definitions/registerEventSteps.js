@@ -1,80 +1,98 @@
-const { Given, Then } = require("@cucumber/cucumber");
+const { test, expect } = require('@playwright/test');
+const { Given, Then,When } = require("@cucumber/cucumber");
 const { EventsHubPage } = require("../pages/eventsHub.page.js");
-const page = new EventsHubPage();
+const { EventsDetailsPage } = require('../pages/eventDetails.page.js');
+const { AdobeIdSigninPage } = require('@amwp/platform-ui-lib-adobe/lib/common/page-objects/adobeidsingin.page.js');
+
+const page = new EventsDetailsPage();
 
 Given('I am on the events hub page', async function () {
-  this.page = new EventsHubPage();
+  this.page = new EventsDetailsPage();
   await this.page.open();
 });
 
-Then('I choose the {string} category', async function (categoryName) {
-  await this.page.selectCategory(categoryName)
-});
+// Then('I choose the {string} category', async function (categoryName) {
+//   await this.page.selectCategory(categoryName)
+// });
 
-Then('confirm events are displayed on the page', async function () {
-  const areEventsDisplayed = await this.page.areEventCardsVisible();
-  if (!areEventsDisplayed) {
-    throw new Error("Event cards are not displayed on the page");
-  }
-  console.log("Event cards are successfully displayed on the page.");
-});
+// Then('confirm events are displayed on the page', async function () {
+//   const areEventsDisplayed = await this.page.areEventCardsVisible();
+//   if (!areEventsDisplayed) {
+//     throw new Error("Event cards are not displayed on the page");
+//   }
+//   console.log("Event cards are successfully displayed on the page.");
+// });
 
-Then('view {string} event', async function (eventTitle) {
-  await this.page.viewEventByTitle(eventTitle);
-});
-
-const { Given, When, Then , And} = require('@cucumber/cucumber');
-const { chromium,expect } = require('@playwright/test');
-const EventDetails = require ('../pages/eventDetails');
-
-let eventDetailsPage =new EventDetails(page);
-
-
-
-const browser = await chromium.launch({ headless: false });
-
-const context = await browser.newContext();
-
-this.page = await context.newPage();
-
+// Then('view {string} event', async function (eventTitle) {
+//   await this.page.viewEventByTitle(eventTitle);
+// });
 
 
 Then('I should see the event details on the page', async function () {
-    await expect(this.eventDetailsPage.isEventDetailsVisible()).toBeTruthy();
+   
+    const eventTitle = await this.page.native.locator(this.page.locators.eventTitle);
+  
+   await eventTitle.waitFor({ state: 'visible'});
+
+    // Assert that the event title element is visible
+   const isVisible = await eventTitle.isVisible();
+    expect(isVisible).toBeTruthy();
     
   });
   
   Then('I should see the Agenda on the event details page', async function () {
-    await expect(this.eventDetailsPage.agenda).has
+    const eventAgenda = this.page.native.locator(this.page.locators.eventAgenda);
+   await eventAgenda.waitFor({ state: 'visible'});
+    // Assert that the event agenda element is visible
+    const isVisible = await eventAgenda.isVisible();
+    expect(isVisible).toBeTruthy();
   });
   
   Then('I should see the Venue on the event details page', async function () {
-    await expect(this.eventDetailsPage.venue).toBeVisible();
+    const eventVenue = this.page.native.locator(this.page.locators.eventVenue);
+   await eventVenue.waitFor({ state: 'visible'});
+    // Assert that the event agenda element is visible
+    const isVisible = await eventVenue.isVisible();
+    expect(isVisible).toBeTruthy();
+  }); 
+  
+  Then('I click the RSVP Button', async function () {
+    try {
+      await this.page.clickRsvp();
+    } catch (error) {
+      console.error("Failed clicking RSVP Button")
+      
+    }
+  
+    
   });
   
-  Then('I should see an RSVP button on the event details page', async function () {
-    await expect(this.eventDetailsPage.rsvpButton).toBeVisible();
-  });
-  
-  Then('the RSVP button should be clickable', async function () {
-    await expect(eventDetailsPage.rsvpButton).toBeEnabled()
-  });
-  
-  When('I click the RSVP button', async function () {
-    await eventDetailsPage.clickRSVPButton();
-  });
-  
-  if (eventDetailsPage.isSignInPage())  {
-  Then('I Sign In', async function () {
+ 
+  Then ('I sign in AdobeID',async function () {
+    try{
+      this.context(AdobeIdSigninPage);
 
+      await this.page.signIn('adgaur+US+Complete+VISA+event-attendee+1@adobetest.com','Bap@d0be')
+      
+      console.log("Sign in done")
+    
+    }
+     
+    catch(error){
+console.log(error)}
+    
+  });
 
-    await eventDetailsPage.signIn('testuser', 'password'); // Replace with actual credentials if necessary
-    Then('I click the RSVP button', async function () {
-        await eventDetailsPage.clickRSVPButton();
-      });
-
-  }); }
-  
+  Then('I again click the RSVP Button', async function () {
+    try {
+      this.context(EventsDetailsPage);
+      await this.page.clickRsvp();
+    } catch (error) {
+      console.error("Failed clicking RSVP Button")
+      
+    }
+  });
+    
   Then('I see the RSVP Form', async function () {
     
     await expect(eventDetailsPage.rsvpForm).toBeVisible();

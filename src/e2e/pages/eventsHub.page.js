@@ -2,14 +2,17 @@ const { EventsBasePage } = require('./eventsBase.page.js');
 
 class EventsHubPage extends EventsBasePage {
   constructor() {
-    super('/events/hub');
+   // super('/events/hub');
+   super('/events/creative-jam/event-test-818/san-francisco/ca/2024-08-20.html?debug=true');
     this.locators = {
       photographyCategoryButton: (categoryName) => `button[data-group="${categoryName}"]`,
       videoCategoryButton: (categoryName) => `button[data-group="${categoryName}"]` ,
       cardsWrapper : `[data-testid='consonant-CardsGrid']`,
       eventCards : `.consonant-Card`,
       eventCard : (eventTitle) => `.consonant-Card-title[title="${eventTitle}"]`,
-      viewEventLink: `//a[span[text()='View event']]`
+      viewEventLink: `//a[span[text()='View event']]`,
+      eventTitle : `//*[@id="event-title"]`,
+      eventDateTime : `//*[@class="display-event-date-time body-m"]`,
     };
   }
 
