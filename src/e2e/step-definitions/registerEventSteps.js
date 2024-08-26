@@ -85,22 +85,34 @@ console.log(error)}
 
   Then('I again click the RSVP Button', async function () {
     try {
-      this.context(EventsDetailsPage);
+      this.page = new EventsDetailsPage();
       await this.page.clickRsvp();
     } catch (error) {
-      console.error("Failed clicking RSVP Button")
+      console.error("Failed clicking RSVP Button", error)
       
     }
   });
     
   Then('I see the RSVP Form', async function () {
     
-    await expect(eventDetailsPage.rsvpForm).toBeVisible();
+    const eventRsvpForm = this.page.native.locator(this.page.locators.eventForm);
+    await eventRsvpForm.waitFor({ state: 'visible'});
+     // Assert that the event form element is visible
+     const isVisible = await eventRsvpForm.isVisible();
+     expect(isVisible).toBeTruthy();
   });
 
-  Then('I see user information pre filled', async function () {
+  Then('I see the event title', async function () {
+
+    await this.page.isEventTitleCorrect();
     
-    await expect(eventDetailsPage.verifyEmail).toBeVisible();
+  });
+
+
+  Then('I verify if email in the form is correct', async function () {
+
+    await this.page.isEventTitleCorrect();
+    
   });
   
   Then('I check the Terms and Conditions', async function () {

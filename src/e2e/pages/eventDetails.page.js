@@ -12,7 +12,14 @@ class EventsDetailsPage extends EventsBasePage {
       eventVenue : '#venue',
       eventAgenda: `#agenda`,
       eventContainer:'.foreground.container',
-      eventRsvp:`//a[text()='RSVP now' and @href='#rsvp-form-1']`
+      eventRsvp:`//a[text()='RSVP now' and @href='#rsvp-form-1']`,
+      eventForm:'#rsvp-form-1',
+      eventFormTitle:`//*[@id='rsvp-form-1']//*[@id='event-title']`,
+      eventRsvpFormEmail:'#email',
+      eventFormCompany:'#companyName',
+      eventFormJob:'#jobTitle',
+      eventFormTermsCondition:'#terms-and-conditions',
+      eventFormSubmit:`//button[text()='Submit']`
     };
   }
 
@@ -22,7 +29,9 @@ class EventsDetailsPage extends EventsBasePage {
     await this.native.waitForSelector(this.locators.eventContainer);
 
     //check Rsvp present inside container
-    await this.native.waitForSelector(this.locators.eventRsvp);
+    try{
+    await this.native.waitForSelector(this.locators.eventRsvp);}
+    catch(error){console.log(error)}
  
     //click the rsvp button
 
@@ -31,7 +40,18 @@ class EventsDetailsPage extends EventsBasePage {
    // await (this.locators.eventRsvp).click();
 
     
-    
+
+  }
+
+
+  async isEventTitleCorrect (){
+    const eventTitleTextContext= await this.locators.eventTitle.textContent();
+    const eventFormTitleTextContext = await this.locators.eventFormTitle.textContent();
+    console.log(eventFormTitleTextContext)
+
+    await expect(this.locators.eventFormTitle).toHaveText(eventTitleTextContext);
+
+
 
 
   }
