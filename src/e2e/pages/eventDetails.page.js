@@ -1,64 +1,86 @@
+const { expect } = require('@playwright/test');
 const { EventsBasePage } = require('./eventsBase.page.js');
+const testData = require("../config/test-data/eventRegistration.json");
 
-
-class EventsDetailsPage extends EventsBasePage {
+class EventDetailPage extends EventsBasePage {
   constructor() {
-    super('/events/creative-jam/adams-creative-jelly-jam/boston/ma/2024-08-30.html?debug=true');
-    
+    super();
     this.locators = {
-     
-      eventTitle : `#event-title`,
-      eventDateTime : `.display-event-date-time.body-m`,
-      eventVenue : '#venue',
+      pageHeader: 'h1#event-title',
+      eventTitle: `#event-title`,
+      eventDateTime: `.display-event-date-time.body-m`,
+      eventVenue: '#venue',
       eventAgenda: `#agenda`,
-      eventContainer:'.foreground.container',
-      eventRsvp:`//a[text()='RSVP now' and @href='#rsvp-form-1']`,
-      eventForm:'#rsvp-form-1',
-      eventFormTitle:`//*[@id='rsvp-form-1']//*[@id='event-title']`,
-      eventRsvpFormEmail:'#email',
-      eventFormCompany:'#companyName',
-      eventFormJob:'#jobTitle',
-      eventFormTermsCondition:'#terms-and-conditions',
-      eventFormSubmit:`//button[text()='Submit']`
+      eventContainer: '.foreground.container',
+      eventRsvp: `//a[text()='RSVP now' and @href='#rsvp-form-1']`,
+      eventForm: '#rsvp-form-1',
+      eventFormTitle: `//*[@id='rsvp-form-1']//*[@id='event-title']`,
+      eventRsvpFormEmail: '#email',
+      eventFormCompany: '#companyName',
+      eventFormJob: '#jobTitle',
+      eventFormTermsCondition: '#terms-and-conditions',
+      eventFormSubmit: `//button[text()='Submit']`
     };
   }
 
+  async verifyNavigationToEventDetailPage(expectedTitle) {
+    try {
+      const normalizedTitle = expectedTitle.toLowerCase().replace(/\s+/g, '-');
+      const expectedUrlPart = `/events/create-now/${normalizedTitle}`;
+      await this.native.waitForURL(new RegExp(expectedUrlPart));
+      const currentUrl = this.native.url();
+      expect(currentUrl).toContain(expectedUrlPart);
+      console.log(`Successfully navigated to URL containing: "${expectedUrlPart}"`);
+    } catch (error) {
+      console.error(`Failed to verify navigation to event detail page with title "${expectedTitle}":`, error.message);
+      throw new Error(`Could not verify navigation to the event detail page for "${expectedTitle}".`);
+    }
+  }
 
-  async clickRsvp(){
-    //check event container is visible
+
+  async verifyOnEventDetailPage(expectedTitle) {
+    try {
+      const header = await this.native.locator(this.locators.pageHeader).innerText();
+      expect(header).toBe(expectedTitle);
+      console.log(`Event detail page header verified as: "${header}"`);
+    } catch (error) {
+      console.error(`Failed to verify event detail page header for title "${expectedTitle}":`, error.message);
+      throw new Error(`Could not verify the event detail page header for "${expectedTitle}".`);
+    }
+  }
+
+  async clickRsvp() {
     await this.native.waitForSelector(this.locators.eventContainer);
-
-    //check Rsvp present inside container
-    try{
-    await this.native.waitForSelector(this.locators.eventRsvp);}
-    catch(error){console.log(error)}
- 
-    //click the rsvp button
-
+    await this.native.waitForSelector(this.locators.eventRsvp);
     await this.native.locator(this.locators.eventRsvp).click();
-    this.native.locator(this.locators.eventRsvp).click();
-   // await (this.locators.eventRsvp).click();
+  }
 
-    
+
+  async isEventTitleCorrect() {
+    const eventTitlefromTestData = testData.eventTitle;
+
+    await expect(this.native.locator(this.locators.eventFormTitle)).toHaveText(eventTitlefromTestData);
 
   }
 
 
-  async isEventTitleCorrect (){
-    const eventTitleTextContext= await this.locators.eventTitle.textContent();
-    const eventFormTitleTextContext = await this.locators.eventFormTitle.textContent();
-    console.log(eventFormTitleTextContext)
+  async isEmailCorrect() {
+    const emailFromTestData = testData.userInfo.username;
+    await expect(this.native.locator(this.locators.eventRsvpFormEmail)).toHaveText(emailFromTestData);
+ }
 
-    await expect(this.locators.eventFormTitle).toHaveText(eventTitleTextContext);
 
+  async fillRsvpForm() {
+    await this.native.locator(this.locators.eventFormCompany).fill(testData.companyName);
+    await this.native.locator(this.locators.eventFormJob).selectOption(testData.jobTitle);
+    await this.native.locator(this.locators.eventFormTermsCondition).check();
+    await this.native.locator(this.locators.eventFormSubmit).click();
 
 
 
   }
 
-  
 
- 
 }
 
-module.exports = { EventsDetailsPage };
+module.exports = { EventDetailPage };

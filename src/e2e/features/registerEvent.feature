@@ -1,22 +1,38 @@
-Feature: Register for an Event
+@registerEvent
+Feature: Event Registration
 
-  @id-registration
-  Scenario: User registers for an event with minimum required fields
-
+  Background:
     Given I am on the events hub page
-    #And I am able to see the events listed there
-    #And I choose the event named "Tech Conference"  # This can be parameterized if needed
-    #When I click the "View Event" button for the selected event
-    #Then I should be taken to the event details page
+
+  Scenario: Navigate to Events Hub
+    Then I should see the Marquee displayed on the page
+    Then I should see events displayed on the page
+    When I select an event card with title from test data
+    Then the banners on the event card should be displayed correctly
+    And I should see the date and time displayed correctly on the event card
+    And the "View event" button on the event card should be clickable
+
+  Scenario: Verify Pagination
+    Then I should see pagination controls
+    And the "Next" button should be clickable
+    And the "Previous" button should be clickable
+    And I should be able to click on specific page numbers
+    And I should see the total number of pages and results displayed
+
+  Scenario: Navigate to an Event Detail Page
+    When I click the "View event" button on an event card with title from test data
+    Then I should navigate to the event detail page
     Then I should see the event details on the page
     Then I should see the Agenda on the event details page
     And I should see the Venue on the event details page
     Then I click the RSVP Button
     Then I sign in AdobeID
-    #Then I again click the RSVP Button
+    Then I again click the RSVP Button
     Then I see the RSVP Form
-    #Then I see user information pre filled
-    #When I check the Terms and Conditions
+    Then I should see the event title I clicked on
+    #And I should see my email prefilled
+    Then I fill all required information
+    # When I check the Terms and Conditions
     #Then I click the Submit button
     #Then I see the registration confirmation
     #Then I close the confirmation
