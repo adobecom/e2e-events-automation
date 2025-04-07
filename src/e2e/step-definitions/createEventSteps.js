@@ -189,6 +189,7 @@ Then('I fill out cloud type and series type with {string}', async function(event
   }
 });
 
+
 Then('I fill minimum required fields such as event title, event description, date, start time, end time, timezone and venue information with {string}', async function(eventDataJson) {
   try {
     const eventData = JSON.parse(eventDataJson);
@@ -387,6 +388,11 @@ Then('I click Next step multiple times', async function () {
         throw new Error("Failed to fill out create event Basic info page with all fields and click Next step:", error.message);
       }
     });
+
+    Then('I fill out additional venue information with {string}', async function(eventDataJson) {
+     //{todo}
+    });
+
 
     Then('I fill out create event Speakers & Hosts page with {string} and click Next step', async function(eventDataJson) {
       try {

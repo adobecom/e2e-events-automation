@@ -1,0 +1,114 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "platform-ui-automation-demo;go-to-the-adobehome-page",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Go to the Adobehome page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 19352457
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 77332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I go to \"/events/hub\"",
+            "match": {
+              "location": "node_modules/@amwp/platform-ui-automation/lib/common/step-definitions/common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1657632706
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I resize the browser window to 1920x1080",
+            "match": {
+              "location": "node_modules/@amwp/platform-ui-automation/lib/common/step-definitions/common.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 294092541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I wait for 5 seconds",
+            "match": {
+              "location": "node_modules/@amwp/platform-ui-automation/lib/common/step-definitions/common.steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5002042249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should see the address bar contains \"adobe.com\"",
+            "match": {
+              "location": "node_modules/@amwp/platform-ui-automation/lib/common/step-definitions/common.steps.js:35"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 10024545790,
+              "error_message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected pattern: \u001b[32m/adobe\\.com/\u001b[39m\nReceived string:  \u001b[31m\"https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=83a36355-ad17-4ed0-8701-e99a3020f86a&response_type=code&scope=openid+profile+email&nonce=1940ada5-0e5b-4ae5-9232-8777120a5c51&state=eyJhbGciOiJSUzI1NiIsImtpZCI6Ijdzb2k4N3pkb3NJRnc4b19fbVR5a082QlVRNEZBVGhjaHlyNGZqY1dSbWcifQ.eyJvd25lciI6ImFkb2JlY29tIiwicmVwbyI6ImVjYy1taWxvIiwicmVxdWVzdFBhdGgiOiIvZXZlbnRzL2h1YiIsInJlcXVlc3RIb3N0Ijoic3RhZ2UtLWVjYy1taWxvLS1hZG9iZWNvbS5obHgucGFnZSIsInJlcXVlc3RQcm90byI6Imh0dHBzIiwiYXVkIjoiODNhMzYzNTUtYWQxNy00ZWQwLTg3MDEtZTk5YTMwMjBmODZhIiwiaXNzIjoiaHR0cHM6Ly9hZG1pbi5obHgucGFnZS8ifQ.N7f5k4VTsC3EDTCenf-qYvvpRx0IHYDD27JFjSRx9RAWNzgQMZN5NF5wIGAyAmWBgxdg6SmjVNtTHSFx-yckhkphxvploveSOoViHiMc8tqm93sNibx-mZ_DmiRFR9rZe5KGkEcLKmAyncDil4yYlDfSWYPVd8IKif1jNfM9rRwRglU0s0zPYFOqURLOT5mQk54v-42Ad8P1Is7HwGye0g_MSneS3ADCxR2PxHuryuP115KldgFYlIX_8zD28oCZjkX_O3Jl4bMHnCdgh-oFNuJY_lJV0Aff72x69y2qa457C4KjemmRUBEZLjCxubQy4fxtCTwxWW-tSdN1ckCEUQ&redirect_uri=https%3A%2F%2Flogin.hlx.page%2F.auth&prompt=select_account&sso_reload=true\"\u001b[39m\nCall log:\n\u001b[2m  - locator._expect with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m    14 × locator resolved to <html class=\"\" dir=\"ltr\" lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=83a36355-ad17-4ed0-8701-e99a3020f86a&response_type=code&scope=openid+profile+email&nonce=1940ada5-0e5b-4ae5-9232-8777120a5c51&state=eyJhbGciOiJSUzI1NiIsImtpZCI6Ijdzb2k4N3pkb3NJRnc4b19fbVR5a082QlVRNEZBVGhjaHlyNGZqY1dSbWcifQ.eyJvd25lciI6ImFkb2JlY29tIiwicmVwbyI6ImVjYy1taWxvIiwicmVxdWVzdFBhdGgiOiIvZXZlbnRzL2h1YiIsInJlcXVlc3RIb3N0Ijoic3RhZ2UtLWVjYy1taWxvLS1hZG9iZWNvbS5obHgucGFnZSIsInJlcXVlc3RQcm90byI6Imh0dHBzIiwiYXVkIjoiODNhMzYzNTUtYWQxNy00ZWQwLTg3MDEtZTk5YTMwMjBmODZhIiwiaXNzIjoiaHR0cHM6Ly9hZG1pbi5obHgucGFnZS8ifQ.N7f5k4VTsC3EDTCenf-qYvvpRx0IHYDD27JFjSRx9RAWNzgQMZN5NF5wIGAyAmWBgxdg6SmjVNtTHSFx-yckhkphxvploveSOoViHiMc8tqm93sNibx-mZ_DmiRFR9rZe5KGkEcLKmAyncDil4yYlDfSWYPVd8IKif1jNfM9rRwRglU0s0zPYFOqURLOT5mQk54v-42Ad8P1Is7HwGye0g_MSneS3ADCxR2PxHuryuP115KldgFYlIX_8zD28oCZjkX_O3Jl4bMHnCdgh-oFNuJY_lJV0Aff72x69y2qa457C4KjemmRUBEZLjCxubQy4fxtCTwxWW-tSdN1ckCEUQ&redirect_uri=https%3A%2F%2Flogin.hlx.page%2F.auth&prompt=select_account&sso_reload=true\"\u001b[22m\n\n    at Proxy.<anonymous> (/Users/rkhan/e2eEvents/e2e-events-automation/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at TheWorld.<anonymous> (/Users/rkhan/e2eEvents/e2e-events-automation/node_modules/@amwp/platform-ui-automation/lib/common/step-definitions/common.steps.js:38:47)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 208133583
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 44750
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@id-1",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "platform-ui-automation-demo",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Platform-UI Automation Demo",
+    "tags": [],
+    "uri": "src/e2e/features/test.feature"
+  }
+]

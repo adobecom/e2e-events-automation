@@ -52,3 +52,416 @@
 2025-03-06T06:43:05.228Z [INFO] Verified prefilled last name : last
 2025-03-06T06:43:05.235Z [INFO] Verified prefilled email : adgaur+US+Complete+VISA+event-attendee+1@adobetest.com
 2025-03-06T06:43:05.241Z [INFO] totalRequiredFields=
+2025-03-20T09:56:38.492Z [HEADING] Starting Scenario: Verify ECC dashboard page content
+2025-03-20T09:56:40.778Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T09:56:45.027Z [INFO] Sign-in required, proceeding with sign-in
+2025-03-20T09:56:49.791Z [INFO] Sign-in completed
+2025-03-20T09:56:58.146Z [INFO] All Events is  displayed on Events Dashboard page
+2025-03-20T09:56:58.152Z [INFO] Search box is  displayed on Events Dashboard page
+2025-03-20T09:56:58.156Z [INFO] Found 9 table headers.
+2025-03-20T09:56:58.165Z [INFO] Correct table headers are visible: ["EVENT NAME","PUBLISH STATUS","DATE RUN","LAST MODIFIED","VENUE NAME","GEO","RSVP DATA","MANAGE"]
+2025-03-20T09:56:58.170Z [INFO] Pagination controls is  displayed on Events Dashboard page
+2025-03-20T09:56:58.178Z [INFO] Footer section is  displayed on Events Dashboard page
+2025-03-20T09:56:58.185Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Required Fields</b></span>"
+2025-03-20T09:56:58.464Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T09:57:00.806Z [INFO] Create new event button is  displayed on Events Dashboard page
+2025-03-20T09:57:00.994Z [INFO] Create New Event button clicked successfully.
+2025-03-20T09:57:00.994Z [INFO] "ECC dashboard" navigated to create events page successfully. URL: "https://www.stage.adobe.com/ecc/create/t3"
+2025-03-20T09:57:02.795Z [INFO] Basic info label is  displayed on page
+2025-03-20T09:57:02.798Z [INFO] Actual text: Basic info
+2025-03-20T09:57:02.799Z [INFO] Expected text: Basic info
+2025-03-20T09:57:02.799Z [INFO] Element text is correct
+2025-03-20T09:57:05.951Z [WARNING] Start date or end date is not enabled, selecting the first available date: 2025-03-21.
+2025-03-20T09:57:05.952Z [INFO] Selected start date: 2025-03-21, Selected end date: 2025-03-21
+2025-03-20T09:57:06.905Z [INFO] Checked checkbox and Venue info will appear post event
+2025-03-20T09:57:07.117Z [INFO] Next Step button clicked.
+2025-03-20T09:57:07.118Z [INFO] Checking for success toast...
+2025-03-20T09:57:10.796Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T09:57:10.797Z [INFO] Success toast appeared with correct message.
+2025-03-20T09:57:10.806Z [INFO] Speakers And Hosts label is displayed on page.
+2025-03-20T09:57:10.807Z [INFO] Actual text: Speakers and hosts
+2025-03-20T09:57:10.808Z [INFO] Expected text: Speakers and hosts
+2025-03-20T09:57:10.808Z [INFO] Element text is correct
+2025-03-20T09:57:10.841Z [INFO] Next Step button clicked.
+2025-03-20T09:57:10.841Z [INFO] Checking for success toast...
+2025-03-20T09:57:10.850Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T09:57:10.850Z [INFO] Success toast appeared with correct message.
+2025-03-20T09:57:14.178Z [INFO] Additional Content label is displayed on page.
+2025-03-20T09:57:14.180Z [INFO] Actual text: Additional Content
+2025-03-20T09:57:14.180Z [INFO] Expected text: Additional Content
+2025-03-20T09:57:14.180Z [INFO] Element text is correct
+2025-03-20T09:57:14.202Z [INFO] Next Step button clicked.
+2025-03-20T09:57:14.203Z [INFO] Checking for success toast...
+2025-03-20T09:57:14.219Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T09:57:14.220Z [INFO] Success toast appeared with correct message.
+2025-03-20T09:57:15.517Z [INFO] Rsvp label is displayed on page.
+2025-03-20T09:57:15.520Z [INFO] Actual text: RSVP
+2025-03-20T09:57:15.520Z [INFO] Expected text: RSVP
+2025-03-20T09:57:15.520Z [INFO] Element text is correct
+2025-03-20T09:57:15.549Z [INFO] Next Step button clicked.
+2025-03-20T09:57:15.549Z [INFO] Checking for success toast...
+2025-03-20T09:57:15.566Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T09:57:15.566Z [INFO] Success toast appeared with correct message.
+2025-03-20T09:57:17.393Z [INFO] Event creation Success toast is displayed on page
+2025-03-20T09:57:17.401Z [INFO] Confirmation message: Success! This event has been published.Go to dashboard
+2025-03-20T09:57:17.406Z [INFO] Button text: Go to dashboard
+2025-03-20T09:57:17.415Z [INFO] Button href:
+2025-03-20T09:57:17.565Z [INFO] Event creation success toast verified and action button clicked successfully.
+2025-03-20T09:57:17.566Z [INFO] "Successfully navigated to ECC dashboard, URL: "https://www.stage.adobe.com/ecc/dashboard/t3?newEventId=f8c5f965-0801-4387-a72f-afca88375c1a"
+2025-03-20T09:57:17.566Z [INFO] Event ID: f8c5f965-0801-4387-a72f-afca88375c1a
+2025-03-20T09:57:19.876Z [INFO] Filled the search box with event name: Auto Events Required Fields
+2025-03-20T09:57:19.885Z [INFO] Event with title "Auto Events Required Fields" and ID "f8c5f965-0801-4387-a72f-afca88375c1a" is present in the table.
+2025-03-20T09:57:19.889Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9</b></span>"
+2025-03-20T09:57:20.191Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T09:57:22.508Z [INFO] Create new event button is  displayed on Events Dashboard page
+2025-03-20T09:57:22.593Z [INFO] Create New Event button clicked successfully.
+2025-03-20T09:57:22.594Z [INFO] "ECC dashboard" navigated to create events page successfully. URL: "https://www.stage.adobe.com/ecc/create/t3"
+2025-03-20T09:57:23.923Z [INFO] Basic info label is  displayed on page
+2025-03-20T09:57:23.925Z [INFO] Actual text: Basic info
+2025-03-20T09:57:23.925Z [INFO] Expected text: Basic info
+2025-03-20T09:57:23.925Z [INFO] Element text is correct
+2025-03-20T09:57:26.752Z [WARNING] Start date or end date is not enabled, selecting the first available date: 2025-03-21.
+2025-03-20T09:57:26.753Z [INFO] Selected start date: 2025-03-21, Selected end date: 2025-03-21
+2025-03-20T09:57:28.165Z [INFO] Checked checkbox and Venue info will appear post event
+2025-03-20T09:57:28.895Z [INFO] Next Step button clicked.
+2025-03-20T09:57:28.895Z [INFO] Checking for success toast...
+2025-03-20T09:57:32.288Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T09:57:32.289Z [INFO] Success toast appeared with correct message.
+2025-03-20T09:57:32.293Z [INFO] Speakers And Hosts label is displayed on page.
+2025-03-20T09:57:32.295Z [INFO] Actual text: Speakers and hosts
+2025-03-20T09:57:32.295Z [INFO] Expected text: Speakers and hosts
+2025-03-20T09:57:32.295Z [INFO] Element text is correct
+2025-03-20T09:57:32.319Z [INFO] Next Step button clicked.
+2025-03-20T09:57:32.320Z [INFO] Checking for success toast...
+2025-03-20T09:57:32.329Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T09:57:32.329Z [INFO] Success toast appeared with correct message.
+2025-03-20T09:57:35.150Z [INFO] Additional Content label is displayed on page.
+2025-03-20T09:57:35.152Z [INFO] Actual text: Additional Content
+2025-03-20T09:57:35.153Z [INFO] Expected text: Additional Content
+2025-03-20T09:57:35.153Z [INFO] Element text is correct
+2025-03-20T09:57:35.178Z [INFO] Next Step button clicked.
+2025-03-20T09:57:35.179Z [INFO] Checking for success toast...
+2025-03-20T09:57:35.194Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T09:57:35.194Z [INFO] Success toast appeared with correct message.
+2025-03-20T09:57:38.519Z [INFO] Rsvp label is displayed on page.
+2025-03-20T09:57:38.522Z [INFO] Actual text: RSVP
+2025-03-20T09:57:38.523Z [INFO] Expected text: RSVP
+2025-03-20T09:57:38.523Z [INFO] Element text is correct
+2025-03-20T09:57:38.553Z [INFO] Next Step button clicked.
+2025-03-20T09:57:38.553Z [INFO] Checking for success toast...
+2025-03-20T09:57:38.569Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T09:57:38.569Z [INFO] Success toast appeared with correct message.
+2025-03-20T09:57:39.880Z [INFO] Event creation Success toast is displayed on page
+2025-03-20T09:57:39.886Z [INFO] Confirmation message: Success! This event has been published.Go to dashboard
+2025-03-20T09:57:39.889Z [INFO] Button text: Go to dashboard
+2025-03-20T09:57:39.896Z [INFO] Button href:
+2025-03-20T09:57:40.148Z [INFO] Event creation success toast verified and action button clicked successfully.
+2025-03-20T09:57:40.149Z [INFO] "Successfully navigated to ECC dashboard, URL: "https://www.stage.adobe.com/ecc/dashboard/t3?newEventId=78ca18dc-2319-4dd5-907a-e1ca012f2fa3"
+2025-03-20T09:57:40.149Z [INFO] Event ID: 78ca18dc-2319-4dd5-907a-e1ca012f2fa3
+2025-03-20T09:57:42.463Z [INFO] Filled the search box with event name: Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9
+2025-03-20T09:57:42.469Z [INFO] Event with title "Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9" and ID "78ca18dc-2319-4dd5-907a-e1ca012f2fa3" is present in the table.
+2025-03-20T09:57:42.474Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Timezone</b></span>"
+2025-03-20T09:57:42.782Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T09:57:45.099Z [INFO] Create new event button is  displayed on Events Dashboard page
+2025-03-20T09:57:45.522Z [INFO] Create New Event button clicked successfully.
+2025-03-20T09:57:45.523Z [INFO] "ECC dashboard" navigated to create events page successfully. URL: "https://www.stage.adobe.com/ecc/create/t3"
+2025-03-20T09:57:46.854Z [INFO] Basic info label is  displayed on page
+2025-03-20T09:57:46.856Z [INFO] Actual text: Basic info
+2025-03-20T09:57:46.856Z [INFO] Expected text: Basic info
+2025-03-20T09:57:46.856Z [INFO] Element text is correct
+2025-03-20T09:57:49.644Z [WARNING] Start date or end date is not enabled, selecting the first available date: 2025-03-21.
+2025-03-20T09:57:49.645Z [INFO] Selected start date: 2025-03-21, Selected end date: 2025-03-21
+2025-03-20T09:58:20.668Z [HEADING] Starting Scenario: Delete the event "<span style="color:black;"><b>Auto Events Required Fields</b></span>"
+2025-03-20T09:58:20.958Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T09:58:23.294Z [INFO] Filled the search box with event name: Auto Events Required Fields
+2025-03-20T09:58:23.332Z [INFO] Clicked the "more options" button successfully.
+2025-03-20T09:58:23.412Z [INFO] Clicked the delete option successfully.
+2025-03-20T09:58:23.512Z [INFO] Deletion confirmation button clicked successfully.
+2025-03-20T09:58:28.210Z [INFO] Event deletion confirmation toast verified successfully.
+2025-03-20T09:58:28.227Z [HEADING] Starting Scenario: Delete the event "<span style="color:black;"><b>Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9</b></span>"
+2025-03-20T09:58:28.508Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T09:58:30.827Z [INFO] Filled the search box with event name: Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9
+2025-03-20T09:58:30.863Z [INFO] Clicked the "more options" button successfully.
+2025-03-20T09:58:30.915Z [INFO] Clicked the delete option successfully.
+2025-03-20T09:58:30.957Z [INFO] Deletion confirmation button clicked successfully.
+2025-03-20T09:58:33.803Z [INFO] Event deletion confirmation toast verified successfully.
+2025-03-20T09:58:33.884Z [HEADING] Starting Scenario: Delete the event "<span style="color:black;"><b>Auto Events Timezone</b></span>"
+2025-03-20T09:58:34.172Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T09:58:36.487Z [INFO] Filled the search box with event name: Auto Events Timezone
+2025-03-20T09:58:38.494Z [ERROR] Event not found on ECC dasboard.
+2025-03-20T21:20:57.858Z [HEADING] Starting Scenario: Verify ECC dashboard page content
+2025-03-20T21:20:58.651Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T21:21:29.604Z [HEADING] Starting Scenario: Verify ECC dashboard page content
+2025-03-20T21:21:31.559Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T21:21:36.087Z [INFO] Sign-in required, proceeding with sign-in
+2025-03-20T21:21:40.769Z [INFO] Sign-in completed
+2025-03-20T21:22:10.775Z [ERROR] All Events not displayed on Events Dashboard page.
+2025-03-20T21:22:12.779Z [ERROR] Search box not displayed on Events Dashboard page.
+2025-03-20T21:22:12.791Z [ERROR] No table headers found.
+2025-03-20T21:22:12.792Z [ERROR] Error occurred while verifying table headers: No table headers found inside //th/span.
+2025-03-20T21:22:12.968Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Required Fields</b></span>"
+2025-03-20T21:22:12.969Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9</b></span>"
+2025-03-20T21:22:12.971Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Timezone</b></span>"
+2025-03-20T21:22:12.973Z [HEADING] Starting Scenario: Delete the event "<span style="color:black;"><b>Auto Events Required Fields</b></span>"
+2025-03-20T21:22:12.974Z [HEADING] Starting Scenario: Delete the event "<span style="color:black;"><b>Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9</b></span>"
+2025-03-20T21:22:12.975Z [HEADING] Starting Scenario: Delete the event "<span style="color:black;"><b>Auto Events Timezone</b></span>"
+2025-03-20T22:59:22.013Z [HEADING] Starting Scenario: Verify ECC dashboard page content
+2025-03-20T22:59:23.273Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T22:59:27.593Z [INFO] Sign-in required, proceeding with sign-in
+2025-03-20T22:59:32.314Z [INFO] Sign-in completed
+2025-03-20T22:59:40.325Z [INFO] All Events is  displayed on Events Dashboard page
+2025-03-20T22:59:40.333Z [INFO] Search box is  displayed on Events Dashboard page
+2025-03-20T22:59:40.336Z [INFO] Found 9 table headers.
+2025-03-20T22:59:40.348Z [INFO] Correct table headers are visible: ["EVENT NAME","PUBLISH STATUS","DATE RUN","LAST MODIFIED","VENUE NAME","GEO","RSVP DATA","MANAGE"]
+2025-03-20T22:59:40.353Z [INFO] Pagination controls is  displayed on Events Dashboard page
+2025-03-20T22:59:40.360Z [INFO] Footer section is  displayed on Events Dashboard page
+2025-03-20T22:59:40.370Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Required Fields</b></span>"
+2025-03-20T22:59:40.681Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T22:59:43.502Z [INFO] Create new event button is  displayed on Events Dashboard page
+2025-03-20T22:59:43.677Z [INFO] Create New Event button clicked successfully.
+2025-03-20T22:59:43.677Z [INFO] "ECC dashboard" navigated to create events page successfully. URL: "https://www.stage.adobe.com/ecc/create/t3"
+2025-03-20T22:59:46.495Z [INFO] Basic info label is  displayed on page
+2025-03-20T22:59:46.499Z [INFO] Actual text: Basic info
+2025-03-20T22:59:46.500Z [INFO] Expected text: Basic info
+2025-03-20T22:59:46.500Z [INFO] Element text is correct
+2025-03-20T23:00:11.616Z [HEADING] Starting Scenario: Verify ECC dashboard page content
+2025-03-20T23:00:13.223Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T23:00:51.790Z [INFO] Sign-in required, proceeding with sign-in
+2025-03-20T23:00:56.564Z [INFO] Sign-in completed
+2025-03-20T23:01:03.363Z [INFO] All Events is  displayed on Events Dashboard page
+2025-03-20T23:01:03.369Z [INFO] Search box is  displayed on Events Dashboard page
+2025-03-20T23:01:03.372Z [INFO] Found 9 table headers.
+2025-03-20T23:01:03.382Z [INFO] Correct table headers are visible: ["EVENT NAME","PUBLISH STATUS","DATE RUN","LAST MODIFIED","VENUE NAME","GEO","RSVP DATA","MANAGE"]
+2025-03-20T23:01:03.389Z [INFO] Pagination controls is  displayed on Events Dashboard page
+2025-03-20T23:01:03.393Z [INFO] Footer section is  displayed on Events Dashboard page
+2025-03-20T23:01:03.399Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Required Fields</b></span>"
+2025-03-20T23:01:03.633Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T23:01:04.980Z [INFO] Create new event button is  displayed on Events Dashboard page
+2025-03-20T23:01:05.407Z [INFO] Create New Event button clicked successfully.
+2025-03-20T23:01:05.408Z [INFO] "ECC dashboard" navigated to create events page successfully. URL: "https://stage--ecc-milo--adobecom.hlx.page/ecc/create/t3"
+2025-03-20T23:01:08.230Z [INFO] Basic info label is  displayed on page
+2025-03-20T23:01:08.235Z [INFO] Actual text: Basic info
+2025-03-20T23:01:08.236Z [INFO] Expected text: Basic info
+2025-03-20T23:01:08.236Z [INFO] Element text is correct
+2025-03-20T23:01:13.144Z [WARNING] Start date or end date is not enabled, selecting the first available date: 2025-03-21.
+2025-03-20T23:01:13.144Z [INFO] Selected start date: 2025-03-21, Selected end date: 2025-03-21
+2025-03-20T23:01:16.031Z [INFO] Checked checkbox and Venue info will appear post event
+2025-03-20T23:01:16.134Z [INFO] Next Step button clicked.
+2025-03-20T23:01:16.134Z [INFO] Checking for success toast...
+2025-03-20T23:01:23.013Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T23:01:23.013Z [INFO] Success toast appeared with correct message.
+2025-03-20T23:01:23.017Z [INFO] Speakers And Hosts label is displayed on page.
+2025-03-20T23:01:23.019Z [INFO] Actual text: Speakers and hosts
+2025-03-20T23:01:23.019Z [INFO] Expected text: Speakers and hosts
+2025-03-20T23:01:23.019Z [INFO] Element text is correct
+2025-03-20T23:01:23.071Z [INFO] Next Step button clicked.
+2025-03-20T23:01:23.071Z [INFO] Checking for success toast...
+2025-03-20T23:01:23.079Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T23:01:23.080Z [INFO] Success toast appeared with correct message.
+2025-03-20T23:01:24.884Z [INFO] Additional Content label is displayed on page.
+2025-03-20T23:01:24.887Z [INFO] Actual text: Additional Content
+2025-03-20T23:01:24.887Z [INFO] Expected text: Additional Content
+2025-03-20T23:01:24.888Z [INFO] Element text is correct
+2025-03-20T23:01:24.941Z [INFO] Next Step button clicked.
+2025-03-20T23:01:24.941Z [INFO] Checking for success toast...
+2025-03-20T23:01:24.955Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T23:01:24.955Z [INFO] Success toast appeared with correct message.
+2025-03-20T23:01:26.756Z [INFO] Rsvp label is displayed on page.
+2025-03-20T23:01:26.759Z [INFO] Actual text: RSVP
+2025-03-20T23:01:26.760Z [INFO] Expected text: RSVP
+2025-03-20T23:01:26.760Z [INFO] Element text is correct
+2025-03-20T23:01:26.833Z [INFO] Next Step button clicked.
+2025-03-20T23:01:26.834Z [INFO] Checking for success toast...
+2025-03-20T23:01:26.845Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T23:01:26.845Z [INFO] Success toast appeared with correct message.
+2025-03-20T23:01:28.153Z [INFO] Event creation Success toast is displayed on page
+2025-03-20T23:01:28.162Z [INFO] Confirmation message: Success! This event has been published.Go to dashboard
+2025-03-20T23:01:58.170Z [ERROR] Error verifying event creation success toast: locator.textContent: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('sp-toast:not(.save-success-msg)[variant="positive"]').locator('sp-button[slot="action"][href^="https://www.stage.adobe.com/ecc/dashboard/t3?newEventId="]')[22m
+
+2025-03-20T23:01:58.172Z [ERROR] Failed to verify navigation to ECC dashboard page: Current URL "https://stage--ecc-milo--adobecom.hlx.page/ecc/create/t3" does not contain the expected part "/ecc/dashboard/t3?newEventId=".
+2025-03-20T23:01:58.172Z [ERROR] Error occured while navigating to ECC dashboard:
+2025-03-20T23:01:58.330Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9</b></span>"
+2025-03-20T23:02:00.921Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T23:02:04.256Z [INFO] Create new event button is  displayed on Events Dashboard page
+2025-03-20T23:02:04.378Z [INFO] Create New Event button clicked successfully.
+2025-03-20T23:02:04.379Z [INFO] "ECC dashboard" navigated to create events page successfully. URL: "https://stage--ecc-milo--adobecom.hlx.page/ecc/create/t3"
+2025-03-20T23:02:04.498Z [INFO] Basic info label is  displayed on page
+2025-03-20T23:02:04.499Z [INFO] Actual text: Basic info
+2025-03-20T23:02:04.500Z [INFO] Expected text: Basic info
+2025-03-20T23:02:04.500Z [INFO] Element text is correct
+2025-03-20T23:02:08.203Z [WARNING] Start date or end date is not enabled, selecting the first available date: 2025-03-21.
+2025-03-20T23:02:08.203Z [INFO] Selected start date: 2025-03-21, Selected end date: 2025-03-21
+2025-03-20T23:02:11.583Z [INFO] Checked checkbox and Venue info will appear post event
+2025-03-20T23:02:11.718Z [INFO] Next Step button clicked.
+2025-03-20T23:02:11.718Z [INFO] Checking for success toast...
+2025-03-20T23:02:17.095Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T23:02:17.096Z [INFO] Success toast appeared with correct message.
+2025-03-20T23:02:17.101Z [INFO] Speakers And Hosts label is displayed on page.
+2025-03-20T23:02:17.103Z [INFO] Actual text: Speakers and hosts
+2025-03-20T23:02:17.104Z [INFO] Expected text: Speakers and hosts
+2025-03-20T23:02:17.104Z [INFO] Element text is correct
+2025-03-20T23:02:17.153Z [INFO] Next Step button clicked.
+2025-03-20T23:02:17.154Z [INFO] Checking for success toast...
+2025-03-20T23:02:17.163Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T23:02:17.163Z [INFO] Success toast appeared with correct message.
+2025-03-20T23:02:18.968Z [INFO] Additional Content label is displayed on page.
+2025-03-20T23:02:18.971Z [INFO] Actual text: Additional Content
+2025-03-20T23:02:18.972Z [INFO] Expected text: Additional Content
+2025-03-20T23:02:18.972Z [INFO] Element text is correct
+2025-03-20T23:02:19.017Z [INFO] Next Step button clicked.
+2025-03-20T23:02:19.017Z [INFO] Checking for success toast...
+2025-03-20T23:02:19.023Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T23:02:19.023Z [INFO] Success toast appeared with correct message.
+2025-03-20T23:02:20.832Z [INFO] Rsvp label is displayed on page.
+2025-03-20T23:02:20.834Z [INFO] Actual text: RSVP
+2025-03-20T23:02:20.834Z [INFO] Expected text: RSVP
+2025-03-20T23:02:20.835Z [INFO] Element text is correct
+2025-03-20T23:02:20.893Z [INFO] Next Step button clicked.
+2025-03-20T23:02:20.893Z [INFO] Checking for success toast...
+2025-03-20T23:02:20.901Z [INFO] Sucess toast message: Edits saved successfully
+2025-03-20T23:02:20.901Z [INFO] Success toast appeared with correct message.
+2025-03-20T23:02:22.226Z [INFO] Event creation Success toast is displayed on page
+2025-03-20T23:02:22.230Z [INFO] Confirmation message: Success! This event has been published.Go to dashboard
+2025-03-20T23:02:52.234Z [ERROR] Error verifying event creation success toast: locator.textContent: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('sp-toast:not(.save-success-msg)[variant="positive"]').locator('sp-button[slot="action"][href^="https://www.stage.adobe.com/ecc/dashboard/t3?newEventId="]')[22m
+
+2025-03-20T23:02:52.236Z [ERROR] Failed to verify navigation to ECC dashboard page: Current URL "https://stage--ecc-milo--adobecom.hlx.page/ecc/create/t3" does not contain the expected part "/ecc/dashboard/t3?newEventId=".
+2025-03-20T23:02:52.236Z [ERROR] Error occured while navigating to ECC dashboard:
+2025-03-20T23:02:52.388Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Timezone</b></span>"
+2025-03-20T23:02:52.550Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T23:02:54.378Z [INFO] Create new event button is  displayed on Events Dashboard page
+2025-03-20T23:02:55.057Z [INFO] Create New Event button clicked successfully.
+2025-03-20T23:02:55.060Z [INFO] "ECC dashboard" navigated to create events page successfully. URL: "https://stage--ecc-milo--adobecom.hlx.page/ecc/create/t3"
+2025-03-20T23:02:58.399Z [INFO] Basic info label is  displayed on page
+2025-03-20T23:02:58.401Z [INFO] Actual text: Basic info
+2025-03-20T23:02:58.401Z [INFO] Expected text: Basic info
+2025-03-20T23:02:58.402Z [INFO] Element text is correct
+2025-03-20T23:03:02.787Z [WARNING] Start date or end date is not enabled, selecting the first available date: 2025-03-21.
+2025-03-20T23:03:02.788Z [INFO] Selected start date: 2025-03-21, Selected end date: 2025-03-21
+2025-03-20T23:03:34.979Z [HEADING] Starting Scenario: Delete the event "<span style="color:black;"><b>Auto Events Required Fields</b></span>"
+2025-03-20T23:03:37.279Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T23:03:41.127Z [INFO] Filled the search box with event name: Auto Events Required Fields
+2025-03-20T23:03:41.220Z [INFO] Clicked the "more options" button successfully.
+2025-03-20T23:03:41.284Z [INFO] Clicked the delete option successfully.
+2025-03-20T23:03:41.347Z [INFO] Deletion confirmation button clicked successfully.
+2025-03-20T23:03:46.182Z [INFO] Event deletion confirmation toast verified successfully.
+2025-03-20T23:03:46.188Z [HEADING] Starting Scenario: Delete the event "<span style="color:black;"><b>Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9</b></span>"
+2025-03-20T23:03:46.364Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T23:03:48.227Z [INFO] Filled the search box with event name: Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9
+2025-03-20T23:03:48.294Z [INFO] Clicked the "more options" button successfully.
+2025-03-20T23:03:48.363Z [INFO] Clicked the delete option successfully.
+2025-03-20T23:03:48.426Z [INFO] Deletion confirmation button clicked successfully.
+2025-03-20T23:03:51.231Z [INFO] Event deletion confirmation toast verified successfully.
+2025-03-20T23:03:51.238Z [HEADING] Starting Scenario: Delete the event "<span style="color:black;"><b>Auto Events Timezone</b></span>"
+2025-03-20T23:03:51.412Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-03-20T23:03:53.290Z [INFO] Filled the search box with event name: Auto Events Timezone
+2025-03-20T23:03:55.295Z [ERROR] Event not found on ECC dasboard.
+2025-04-02T18:52:36.540Z [HEADING] Starting Scenario: Go to the Adobehome page
+2025-04-02T18:57:10.639Z [HEADING] Starting Scenario: Go to the Adobehome page
+2025-04-03T08:18:35.494Z [HEADING] Starting Scenario: Verify ECC dashboard page content
+2025-04-03T08:18:37.177Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-04-03T08:18:41.544Z [INFO] Sign-in required, proceeding with sign-in
+2025-04-03T08:18:47.179Z [INFO] Sign-in completed
+2025-04-03T08:18:55.378Z [INFO] All Events is  displayed on Events Dashboard page
+2025-04-03T08:18:55.387Z [INFO] Search box is  displayed on Events Dashboard page
+2025-04-03T08:18:55.391Z [INFO] Found 9 table headers.
+2025-04-03T08:18:55.401Z [INFO] Correct table headers are visible: ["EVENT NAME","PUBLISH STATUS","DATE RUN","LAST MODIFIED","VENUE NAME","GEO","RSVP DATA","MANAGE"]
+2025-04-03T08:18:55.406Z [INFO] Pagination controls is  displayed on Events Dashboard page
+2025-04-03T08:18:55.411Z [INFO] Footer section is  displayed on Events Dashboard page
+2025-04-03T08:18:55.420Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Required Fields</b></span>"
+2025-04-03T08:18:55.600Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-04-03T08:18:57.419Z [INFO] Create new event button is  displayed on Events Dashboard page
+2025-04-03T08:18:57.966Z [INFO] Create New Event button clicked successfully.
+2025-04-03T08:18:57.967Z [INFO] "ECC dashboard" navigated to create events page successfully. URL: "https://dev--ecc-milo--adobecom.hlx.live/ecc/create/t3"
+2025-04-03T08:19:02.309Z [INFO] Basic info label is  displayed on page
+2025-04-03T08:19:02.316Z [INFO] Actual text: Basic info
+2025-04-03T08:19:02.317Z [INFO] Expected text: Basic info
+2025-04-03T08:19:02.317Z [INFO] Element text is correct
+2025-04-03T08:19:05.977Z [WARNING] Start date or end date is not enabled, selecting the first available date: 2025-04-04.
+2025-04-03T08:19:05.978Z [INFO] Selected start date: 2025-04-04, Selected end date: 2025-04-04
+2025-04-03T08:19:07.780Z [INFO] Checked checkbox and Venue info will appear post event
+2025-04-03T08:19:07.885Z [INFO] Next Step button clicked.
+2025-04-03T08:19:07.889Z [INFO] Checking for success toast...
+2025-04-03T08:19:15.322Z [INFO] Sucess toast message: Edits saved successfully
+2025-04-03T08:19:15.323Z [INFO] Success toast appeared with correct message.
+2025-04-03T08:19:15.329Z [INFO] Speakers And Hosts label is displayed on page.
+2025-04-03T08:19:15.332Z [INFO] Actual text: Speakers and hosts
+2025-04-03T08:19:15.332Z [INFO] Expected text: Speakers and hosts
+2025-04-03T08:19:15.332Z [INFO] Element text is correct
+2025-04-03T08:19:15.354Z [INFO] Next Step button clicked.
+2025-04-03T08:19:15.354Z [INFO] Checking for success toast...
+2025-04-03T08:19:15.363Z [INFO] Sucess toast message: Edits saved successfully
+2025-04-03T08:19:15.364Z [INFO] Success toast appeared with correct message.
+2025-04-03T08:19:16.657Z [INFO] Additional Content label is displayed on page.
+2025-04-03T08:19:16.659Z [INFO] Actual text: Additional Content
+2025-04-03T08:19:16.659Z [INFO] Expected text: Additional Content
+2025-04-03T08:19:16.659Z [INFO] Element text is correct
+2025-04-03T08:19:16.684Z [INFO] Next Step button clicked.
+2025-04-03T08:19:16.684Z [INFO] Checking for success toast...
+2025-04-03T08:19:16.698Z [INFO] Sucess toast message: Edits saved successfully
+2025-04-03T08:19:16.698Z [INFO] Success toast appeared with correct message.
+2025-04-03T08:19:18.494Z [INFO] Rsvp label is displayed on page.
+2025-04-03T08:19:18.496Z [INFO] Actual text: RSVP
+2025-04-03T08:19:18.497Z [INFO] Expected text: RSVP
+2025-04-03T08:19:18.497Z [INFO] Element text is correct
+2025-04-03T08:19:18.519Z [INFO] Next Step button clicked.
+2025-04-03T08:19:18.520Z [INFO] Checking for success toast...
+2025-04-03T08:19:18.537Z [INFO] Sucess toast message: Edits saved successfully
+2025-04-03T08:19:18.537Z [INFO] Success toast appeared with correct message.
+2025-04-03T08:19:19.863Z [INFO] Event creation Success toast is displayed on page
+2025-04-03T08:19:19.868Z [INFO] Confirmation message: Success! This event has been published.Go to dashboard
+2025-04-03T08:19:49.873Z [ERROR] Error verifying event creation success toast: locator.textContent: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('sp-toast:not(.save-success-msg)[variant="positive"]').locator('sp-button[slot="action"][href^="https://www.stage.adobe.com/ecc/dashboard/t3?newEventId="]')[22m
+
+2025-04-03T08:19:49.875Z [ERROR] Failed to verify navigation to ECC dashboard page: Current URL "https://dev--ecc-milo--adobecom.hlx.live/ecc/create/t3" does not contain the expected part "/ecc/dashboard/t3?newEventId=".
+2025-04-03T08:19:49.882Z [ERROR] Error occured while navigating to ECC dashboard:
+2025-04-03T08:19:50.022Z [HEADING] Starting Scenario: Create event with required fields and validate "<span style="color:black;"><b>Auto Events Spl chars !@#$%^&*()_+ & numbers 123.9</b></span>"
+2025-04-03T08:19:50.184Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-04-03T08:19:52.540Z [INFO] Create new event button is  displayed on Events Dashboard page
+2025-04-03T08:19:52.637Z [INFO] Create New Event button clicked successfully.
+2025-04-03T08:19:52.637Z [INFO] "ECC dashboard" navigated to create events page successfully. URL: "https://dev--ecc-milo--adobecom.hlx.live/ecc/create/t3"
+2025-04-03T08:19:52.764Z [INFO] Basic info label is  displayed on page
+2025-04-03T08:19:52.767Z [INFO] Actual text: Basic info
+2025-04-03T08:19:52.768Z [INFO] Expected text: Basic info
+2025-04-03T08:19:52.768Z [INFO] Element text is correct
+2025-04-03T08:19:55.955Z [WARNING] Start date or end date is not enabled, selecting the first available date: 2025-04-04.
+2025-04-03T08:19:55.955Z [INFO] Selected start date: 2025-04-04, Selected end date: 2025-04-04
+2025-04-03T08:19:57.225Z [INFO] Checked checkbox and Venue info will appear post event
+2025-04-03T08:19:57.329Z [INFO] Next Step button clicked.
+2025-04-03T08:19:57.330Z [INFO] Checking for success toast...
+2025-04-03T08:20:03.213Z [INFO] Sucess toast message: Edits saved successfully
+2025-04-03T08:20:03.213Z [INFO] Success toast appeared with correct message.
+2025-04-03T08:20:03.220Z [INFO] Speakers And Hosts label is displayed on page.
+2025-04-03T08:20:03.222Z [INFO] Actual text: Speakers and hosts
+2025-04-03T08:20:03.222Z [INFO] Expected text: Speakers and hosts
+2025-04-03T08:20:03.223Z [INFO] Element text is correct
+2025-04-03T08:20:03.243Z [INFO] Next Step button clicked.
+2025-04-03T08:20:03.245Z [INFO] Checking for success toast...
+2025-04-03T08:20:03.254Z [INFO] Sucess toast message: Edits saved successfully
+2025-04-03T08:20:03.255Z [INFO] Success toast appeared with correct message.
+2025-04-03T08:20:04.549Z [INFO] Additional Content label is displayed on page.
+2025-04-03T08:20:04.553Z [INFO] Actual text: Additional Content
+2025-04-03T08:20:04.554Z [INFO] Expected text: Additional Content
+2025-04-03T08:20:04.554Z [INFO] Element text is correct
+2025-04-03T08:20:04.576Z [INFO] Next Step button clicked.
+2025-04-03T08:20:04.578Z [INFO] Checking for success toast...
+2025-04-03T08:20:04.592Z [INFO] Sucess toast message: Edits saved successfully
+2025-04-03T08:20:04.593Z [INFO] Success toast appeared with correct message.
+2025-04-03T08:20:06.398Z [INFO] Rsvp label is displayed on page.
+2025-04-03T08:20:06.402Z [INFO] Actual text: RSVP
+2025-04-03T08:20:06.404Z [INFO] Expected text: RSVP
+2025-04-03T08:20:06.404Z [INFO] Element text is correct
+2025-04-03T08:20:06.434Z [INFO] Next Step button clicked.
+2025-04-03T08:20:06.434Z [INFO] Checking for success toast...
+2025-04-03T08:20:06.451Z [INFO] Sucess toast message: Edits saved successfully
+2025-04-03T08:20:06.451Z [INFO] Success toast appeared with correct message.
+2025-04-03T08:20:07.766Z [INFO] Event creation Success toast is displayed on page
+2025-04-03T08:20:07.770Z [INFO] Confirmation message: Success! This event has been published.Go to dashboard
+2025-04-03T21:21:16.810Z [HEADING] Starting Scenario: Verify ECC dashboard page content
+2025-04-03T21:21:17.780Z [INFO] Navigated to the Events Dashboard page successfully.
+2025-04-03T21:21:21.819Z [INFO] Sign-in required, proceeding with sign-in
+2025-04-03T21:21:26.356Z [INFO] Sign-in completed

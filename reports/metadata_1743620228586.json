@@ -1,0 +1,10 @@
+{
+  "browser": {
+    "name": "Browser",
+    "value": "chrome"
+  },
+  "environment": {
+    "name": "Environment",
+    "value": "stage"
+  }
+}

@@ -17,8 +17,9 @@ function mergeMetadataWithLogs() {
     dataFiles.forEach(dataFile => {
         const timestamp = dataFile.split('_')[1].split('.')[0];
         const matchingMetadataFile = `metadata_${timestamp}.json`;
-
+        console.log(`${metadataFiles} + ${matchingMetadataFile}`)
         if (metadataFiles.includes(matchingMetadataFile)) {
+            console.log("here")
             try {
                 const logContent = JSON.parse(fs.readFileSync(path.join(reportDir, dataFile), 'utf-8'));
                 const metadataContent = JSON.parse(fs.readFileSync(path.join(reportDir, matchingMetadataFile), 'utf-8'));
