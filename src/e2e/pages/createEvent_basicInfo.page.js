@@ -202,7 +202,9 @@ class BasicInfo extends EventsBasePage {
             BasicInfo.eventName = eventTitleName;
 
             const descriptionInput = this.native.locator(this.locators.eventDescription);
-            await descriptionInput.type(eventData.description);
+            const descriptionRTE = this.native.locator(this.locators.eventDescriptionRTE);
+            await descriptionInput.type(eventData.description.text);
+            await descriptionRTE.type(eventData.description.html);
 
             await this.selectDate(eventData.startDate, eventData.endDate);
 
